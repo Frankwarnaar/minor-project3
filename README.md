@@ -75,3 +75,5 @@ The caterers get asked to create an inventory with all their devices. The sum of
 The festival and the caterers can show off with their durable status data that is generated during the festival.
 
 ![Use Case image](images/use-case.jpg)
+![Leaderboard image](images/leaderboard.jpg)
+![Dashboard image](images/dashboard.jpg)
