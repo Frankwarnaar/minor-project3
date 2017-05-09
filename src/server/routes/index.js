@@ -8,7 +8,20 @@ function getRanking(req, res) {
 	res.render('ranking');
 }
 
-const caterers = []
+const caterers = [
+	{
+		title: 'Friet tent',
+		id: 'FFB3',
+		data: [],
+		average: 24.38
+	},
+	{
+		title: 'Pizza tent',
+		id: '03EE',
+		data: [],
+		average: 17.43
+	}
+];
 
 function updateCatererData(req, res) {
 	const id = req.params.id;
@@ -35,13 +48,17 @@ function updateCatererData(req, res) {
 		}, 0) / recentData.length;
 		const totalProductsSold = recentData[recentData.length - 1].productsSold - recentData[0].productsSold;
 		matchingCaterer.efficiency = totalProductsSold / averageConsumption / recentData.length * 60;
+		matchingCaterer.score = matchingCaterer.efficiency / matchingCaterer.average;
+		console.log(matchingCaterer);
 	} else {
+		const efficiency = prodoctsSold / consumption;
 		caterers.push({
 			id,
 			data: [snapshot],
-			efficiency: productsSold / consumption
+			efficiency,
 		});
 	}
+	console.log(caterers);
 }
 
 module.exports = router;
