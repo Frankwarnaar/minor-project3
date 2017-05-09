@@ -10,16 +10,23 @@ function getRanking(req, res) {
 
 const caterers = [
 	{
-		title: 'Friet tent',
+		title: 'Sandwiches',
 		id: 'FFB3',
 		data: [],
 		average: 24.38
 	},
 	{
-		title: 'Pizza tent',
+		title: 'Snackbar',
 		id: '03EE',
 		data: [],
 		average: 17.43
+	}
+	},
+	{
+		title: 'Kebab',
+		id: 'a',
+		data: [],
+		average: 12.98
 	}
 ];
 
@@ -49,7 +56,6 @@ function updateCatererData(req, res) {
 		const totalProductsSold = recentData[recentData.length - 1].productsSold - recentData[0].productsSold;
 		matchingCaterer.efficiency = totalProductsSold / averageConsumption / recentData.length * 60;
 		matchingCaterer.score = matchingCaterer.efficiency / matchingCaterer.average;
-		console.log(matchingCaterer);
 	} else {
 		const efficiency = prodoctsSold / consumption;
 		caterers.push({
