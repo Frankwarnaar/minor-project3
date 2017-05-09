@@ -5,21 +5,18 @@ class View {
 
 	renderRanking(ranking) {
 		ranking = ranking.sort((a, b) => {
-			return a.ratio - b.ratio;
-		})
+			return a.score - b.score;
+		});
 
 		const $list = document.getElementById('ranking');
+		$list.innerHTML = null;
 		ranking.forEach(caterer => {
-			console.log(caterer);
 			const $caterer = document.createElement('li');
 			const content = `
-			<div class="image-container">
-				<img src="${caterer.image}" alt="${caterer.title}"/>
-			</div>
 			<h2>${caterer.title}</h2>
-			<span>${caterer.ratio}</span>
+			<span>${caterer.score}</span>
 			`;
-			const zone = this.app.utils.calculateScoreZone(caterer.ratio);
+			const zone = this.app.utils.calculateScoreZone(caterer.score);
 
 			$caterer.classList.add('caterer');
 			$caterer.classList.add(zone);

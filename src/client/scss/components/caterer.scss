@@ -23,7 +23,7 @@
 	}
 
 	&.low {
-		background: $color-highlight-success-lightest;
+		background: $color-highlight-error-lightest;
 	}
 
 	&.medium {
@@ -31,6 +31,6 @@
 	}
 
 	&.high {
-		background: $color-highlight-error-lightest;
+		background: $color-highlight-success-lightest;
 	}
 }

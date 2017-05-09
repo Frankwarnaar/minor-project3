@@ -26,17 +26,10 @@ class Caterer {
 	}
 }
 
-const ranking = [
-	new Caterer('CURRYUP', .4, '//www.curryup.nl/wp-content/uploads/bfi_thumb/DSC_2399_low-m1kpvub638062sle3p0m72omgf1bzvs5iidnv0x5q8.jpg'),
-	new Caterer('Tea & Crumpets', .1, '//s-media-cache-ak0.pinimg.com/736x/77/d0/0e/77d00e080f016966f2c1bd67573f744c.jpg'),
-	new Caterer('Taco - Border grill', .8, '//theorangecat.lajoiedevivremedia.com/files/2014/07/Fancy-Food-Truck-Fridays-at-Websters-Pharmacy-Orange-Cat-dot-Net.png')
-];
-
 const io = require('socket.io')(server);
 
 io.on('connection', socket => {
 	console.log(`Client ${socket.id} connected`);
-	socket.emit('publishRanking', ranking);
 
 	socket.on('disconnect', () => {
 		console.log('user disconnected');

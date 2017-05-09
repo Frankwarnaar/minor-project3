@@ -12,7 +12,6 @@ class Controller {
 
 		this.app.socket
 			.on('publishRanking', this.app.view.renderRanking.bind(this));
-
 	}
 }
 

@@ -5,10 +5,10 @@ class Utils {
 
 	calculateScoreZone(ratio) {
 		switch(true) {
-			case (ratio > this.app.config.caterers.ratios.high):
+			case (ratio > 1.05):
 				return 'high';
 				break;
-			case (ratio < this.app.config.caterers.ratios.low):
+			case (ratio < .95):
 				return 'low';
 				break;
 			default:
