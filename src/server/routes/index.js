@@ -8,26 +8,19 @@ function getRanking(req, res) {
 	res.render('ranking');
 }
 
+class Caterer {
+	constructor(title, id, average) {
+		this.title = title;
+		this.id = id;
+		this.average = average;
+		this.data = [];
+	}
+}
+
 const caterers = [
-	{
-		title: 'Sandwiches',
-		id: 'FFB3',
-		data: [],
-		average: 24.38
-	},
-	{
-		title: 'Snackbar',
-		id: '03EE',
-		data: [],
-		average: 17.43
-	}
-	},
-	{
-		title: 'Kebab',
-		id: 'a',
-		data: [],
-		average: 12.98
-	}
+	new Caterer('Sandwiches', 'FFB3', 24.38),
+	new Caterer('Snackbar', 'O3EE', 17.43),
+	new Caterer('Kebab', 'a', 12.98)
 ];
 
 function updateCatererData(req, res) {
