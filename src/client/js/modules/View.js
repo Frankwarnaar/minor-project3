@@ -5,7 +5,7 @@ class View {
 
 	renderRanking(ranking) {
 		ranking = ranking.sort((a, b) => {
-			return a.score - b.score;
+			return b.score - a.score;
 		});
 
 		const $list = document.getElementById('ranking');
@@ -14,7 +14,7 @@ class View {
 			const $caterer = document.createElement('li');
 			const content = `
 			<h2>${caterer.title}</h2>
-			<span>${caterer.score}</span>
+			<span>${caterer.score || 0}</span>
 			`;
 			const zone = this.app.utils.calculateScoreZone(caterer.score);
 

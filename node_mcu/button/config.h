@@ -14,7 +14,7 @@
 #define PROJECT_SHORT_NAME "ICU"
 #define REQUEST_DELAY 2000
 
-#define SERVER_URL "http://1bd3f09c.ngrok.io"
+#define SERVER_URL "http://29326de0.ngrok.io"
 #define CONFIG_SSID "icu"
 
 #define BACKUP_SSID "BackupSSIDName"

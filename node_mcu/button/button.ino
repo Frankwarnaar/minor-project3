@@ -85,7 +85,8 @@ void loop() {
     Serial.println("There are " + String(productsSold) + " products sold");
   }
 
-  if (steps % 200 == 1) {
+  if (steps == 200) {
+    steps = 0;
     sendData(powerUsage, productsSold);
   }
 //  struct timeval tv;
