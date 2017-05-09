@@ -1,0 +1,36 @@
+.caterer {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	max-height: 20vh;
+
+	.image-container {
+		width: 33%;
+		height: min-content;
+
+		img {
+			width: 100%;
+		}
+	}
+
+	h2 {
+		margin: 0;
+		padding: 0;
+	}
+
+	span {
+		font-size: 2em;
+	}
+
+	&.low {
+		background: $color-highlight-success-lightest;
+	}
+
+	&.medium {
+		background: $color-highlight-warning-lightest;
+	}
+
+	&.high {
+		background: $color-highlight-error-lightest;
+	}
+}
