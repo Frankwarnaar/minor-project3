@@ -28,7 +28,7 @@ const caterers = [
 
 function updateCatererData(req, res) {
 	const id = req.params.id;
-	const consumption = req.params.consumption / 20;
+	const consumption = req.params.consumption / 100;
 	const productsSold = Number(req.params.productsSold);
 	const timestamp = (new Date()).getTime();
 	const matchingCaterer = caterers.find(caterer => {
