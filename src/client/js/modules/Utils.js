@@ -5,7 +5,6 @@ class Utils {
 
 	calculateScoreZone(score, target) {
 		const ratio = score / target;
-		console.log(ratio);
 		switch(true) {
 			case (ratio == 0):
 				return 'not measured';
