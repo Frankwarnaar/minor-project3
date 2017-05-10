@@ -28,7 +28,7 @@ class View {
 				</div>
 				<div class="caterer-inner">
 					<span class="display-sm subtitle-head">Products per kWh</span>
-					<span>${caterer.score}</span>
+					<span>${caterer.average}</span>
 				</div>
 				<div class="caterer-inner">
 					<span class="display-sm subtitle-head">Target</span>
@@ -40,7 +40,7 @@ class View {
 				</div>
 				</div>
 				`;
-				
+
 				$caterer.classList.add('caterer');
 				// $caterer.classList.add(zone);
 				$caterer.insertAdjacentHTML('beforeend', content);
