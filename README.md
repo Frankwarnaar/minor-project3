@@ -73,9 +73,10 @@ The caterers get asked to create an inventory with all their devices. The sum of
 
  The leaderboard changes and the visitors can make durable decisions based on the visible data.
 
+ ![Leaderboard image](images/leaderboard.jpg)
+
 ##### After the festival
 
-The festival and the caterers can show off with their durable status data that is generated during the festival.
+The festival and the caterers can show off with their durable status data that is generated during the festival. The caterer can view his personal dashboard with all information about their sustainability.
 
-![Leaderboard image](images/leaderboard.jpg)
 ![Dashboard image](images/dashboard.jpg)
