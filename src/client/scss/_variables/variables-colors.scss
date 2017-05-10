@@ -8,17 +8,23 @@ $color-gray-mineshaft:	#7e8c8d;
 $color-gray-midnight:   #41484e;
 $color-gray-wetasphalt: #34495e;
 
-$color-primary:            #38735e;
+$color-primary:            #81e1dd;
 $color-primary-lightest:   lighten($color-primary, 20%);
 $color-primary-lighter:    lighten($color-primary, 10%);
 $color-primary-darker:     darken($color-primary, 5%);
 $color-primary-darkest:    darken($color-primary, 8%);
 
-$color-secondary:            #8cb6be;
+$color-secondary:            #a578dd;
 $color-secondary-lightest:   lighten($color-secondary, 20%);
 $color-secondary-lighter:    lighten($color-secondary, 10%);
 $color-secondary-darker:     darken($color-secondary, 10%);
 $color-secondary-darkest:    darken($color-secondary, 20%);
+
+$color-tertiary:            #285576;
+$color-tertiary-lightest:   lighten($color-tertiary, 20%);
+$color-tertiary-lighter:    lighten($color-tertiary, 10%);
+$color-tertiary-darker:     darken($color-tertiary, 10%);
+$color-tertiary-darkest:    darken($color-tertiary, 20%);
 
 $color-highlight-success:          #00f787;
 $color-highlight-success-lighter:  lighten($color-highlight-success, 32%);

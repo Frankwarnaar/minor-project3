@@ -1,7 +1,43 @@
 <%- include ./parts/header.ejs %>
+<%- include ./parts/nav.ejs %>
 
-<div class="container-fluid">
-	<ol id="ranking"></ol>
+<div class="container">
+	<div class="spacer-2"></div>
+	<div class="row">
+		<div class="col-xs-12">
+			<div class="ranking-header">
+				<div class="place-header">
+					<span>Pos.</span>
+				</div>
+				<div class="block-header">
+					<div class="inner-header">
+						<span>Food/Drink stand</span>
+					</div>
+					<div class="inner-header">
+						<span>Products per kWh</span>
+					</div>
+					<div class="inner-header">
+						<span>Target</span>
+					</div>
+					<div class="inner-header">
+						<span>Sustainability</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-xs-12">
+			<ol id="ranking"></ol>
+		</div>
+	</div>
+	<div class="spacer-2"></div>
+	<div class="spacer-3"></div>
+	<div class="row">
+		<div class="col-xs-12 text-center">
+			<h2>We carefully collect live data from the caterers to update the leaderboard.</h2>
+		</div>
+	</div>
 </div>
 
 <%- include ./parts/scripts.ejs %>

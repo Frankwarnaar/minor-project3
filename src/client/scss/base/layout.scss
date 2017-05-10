@@ -2,10 +2,37 @@
 	padding: 0;
 	margin: 0;
 	box-sizing: border-box;
+	font-family: 'Avenir';
 }
 
 body {
 	font: 100% system-ui;
 	margin: 0;
 	padding-top: 0;
+	background-image: url('/images/bg.jpg');
+	background-size: cover;
+	background-attachment: fixed;
+}
+
+h2{
+	color: #fff;
+	font-size: 2em;
+}
+
+.spacer-1{
+	clear: both;
+	display: block;
+	height: 10px;
+}
+
+.spacer-2{
+	clear: both;
+	display: block;
+	height: 20px;
+}
+
+.spacer-3{
+	clear: both;
+	display: block;
+	height: 30px;
 }

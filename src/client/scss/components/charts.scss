@@ -1,0 +1,21 @@
+svg {
+	display: block;
+	margin: 0 auto;
+	margin-bottom: 5rem;
+	border: 2px solid $color-lightest;
+}
+
+svg path {
+	fill: none;
+	stroke-width: 2px;
+	stroke: $color-primary;
+	opacity: .8;
+
+	&.path__secondary {
+		stroke: $color-secondary;
+	}
+
+	&.path__tertiary {
+		stroke: $color-tertiary;
+	}
+}

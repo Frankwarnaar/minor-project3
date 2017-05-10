@@ -5,6 +5,9 @@ class Utils {
 
 	calculateScoreZone(ratio) {
 		switch(true) {
+			case (ratio == 0):
+				return 'not measured';
+				break;
 			case (ratio > 1.05):
 				return 'high';
 				break;
