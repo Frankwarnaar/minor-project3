@@ -72,12 +72,19 @@ The caterers get asked to create an inventory with all their devices. The sum of
  Every 10 seconds a dataset is being pulled from the caterer. The dataset is being processed and new data is send to the leaderboard and the dashboard.
 
  The leaderboard changes and the visitors can make durable decisions based on the visible data.
+<<<<<<< Updated upstream
 
  ![Leaderboard image](images/leaderboard.jpg)
  ![Leaderboard image](images/leaderboard-physical.jpg)
+=======
+>>>>>>> Stashed changes
 
 ##### After the festival
 
 The festival and the caterers can show off with their durable status data that is generated during the festival. The caterer can view his personal dashboard with all information about their sustainability.
 
+<<<<<<< Updated upstream
+=======
+![Leaderboard image](images/leaderboard.jpg)
+>>>>>>> Stashed changes
 ![Dashboard image](images/dashboard.jpg)
