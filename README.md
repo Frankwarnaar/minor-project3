@@ -74,6 +74,7 @@ The caterers get asked to create an inventory with all their devices. The sum of
  The leaderboard changes and the visitors can make durable decisions based on the visible data.
 
  ![Leaderboard image](images/leaderboard.jpg)
+ ![Leaderboard image](images/leaderboard-physical.jpg)
 
 ##### After the festival
 
