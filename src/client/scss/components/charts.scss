@@ -1,15 +1,24 @@
-svg {
-	display: block;
-	margin: 0 auto;
+.chart-container {
+	display: flex;
 	margin-bottom: 5rem;
-	border: 2px solid $color-lightest;
+	margin-top: 5rem;
+	flex-direction: row;
+	justify-content: center;
+	position: relative;
+}
+
+svg {
+	padding: 1rem;
+	padding-top: 2rem;
+	margin: 0 auto;
+	display: block;
+	border: .325rem solid $color-lightest;
 }
 
 svg path {
 	fill: none;
-	stroke-width: 2px;
+	stroke-width: .325rem;
 	stroke: $color-primary;
-	opacity: .8;
 
 	&.path__secondary {
 		stroke: $color-secondary;
@@ -17,5 +26,16 @@ svg path {
 
 	&.path__tertiary {
 		stroke: $color-tertiary;
+	}
+}
+
+.chart__axis {
+	path {
+		stroke-width: .25rem;
+		stroke: $color-lightest;
+	}
+
+	.tick {
+		fill: $color-lightest;
 	}
 }

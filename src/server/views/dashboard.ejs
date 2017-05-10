@@ -1,8 +1,24 @@
 <%- include ./parts/header.ejs %>
 <%- include ./parts/nav.ejs %>
 
-<main>
+<main class="chart-container">
 	<input type="hidden" data-id="<%= id %>"/>
+	<section class="legend">
+		<ul>
+			<li class="legend__item">
+				<div class="legend__item-dot"></div>
+				<span class="legend__item-name">Consumption</span>
+			</li>
+			<li class="legend__item legend__item--secondary">
+				<div class="legend__item-dot"></div>
+				<span class="legend__item-name">Sustainability</span>
+			</li>
+			<li class="legend__item legend__item--tertiary">
+				<div class="legend__item-dot"></div>
+				<span class="legend__item-name">Sold products</span>
+			</li>
+		</ul>
+	</section>
 	<div id="line-chart"></div>
 </main>
 
