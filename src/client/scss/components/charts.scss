@@ -1,0 +1,9 @@
+svg {
+	border: 2px solid $color-lightest;
+}
+
+svg path {
+	fill: none;
+	stroke-width: 2px;
+	stroke: $color-primary;
+}

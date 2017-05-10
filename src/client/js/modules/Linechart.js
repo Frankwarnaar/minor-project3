@@ -23,20 +23,30 @@ class Linechart {
 			.attr('width', this.settings.width)
 			.attr('height', this.settings.height);
 
+		console.log(d3);
+
 		this.scoreGroup = this.svg.append('g');
 
-		this.x = d3.scaleTime()
+		this.x = d3.time.scale()
 			.range([0, this.settings.width]);
 
-		this.yScore = d3.scaleLinear()
+		this.yScore = d3.scale.linear()
 			.rangeRound([this.settings.height, 0]);
 		// this.yConsumption = d3.scaleLinear()
 		// 	.rangeRound([height, 0]);
 		// this.yProductsSold = d3.scaleLinear()
 		// 	.rangeRound([height, 0]);
-		this.scoreLine = d3.line()
-			.x(d => x(new Date(d.timestamp)))
-			.y(d => y(new Date(d.score)));
+
+		this.scorePath = d3.svg.line()
+			.x(d => {
+				return this.x(new Date(d.timestamp));
+			})
+			.y(d => {
+				console.log(d.score);
+				return this.yScore(d.score);
+			});
+
+		this.scoreLine = this.scoreGroup.append('path');
 	}
 
 	update(ranking) {
@@ -44,10 +54,13 @@ class Linechart {
 			return caterer.id === this.id;
 		})[0];
 		const data = caterer.data;
-		console.log(data);
 
 		this.x.domain(d3.extent(data, d => new Date(d.timestamp)));
-		this.yScore.domain(d3.extent(data, d => new Date(d.score)));
+		this.yScore.domain(d3.extent(data, d => d.score));
+
+		this.scoreLine.data(data);
+
+		this.scoreLine.attr('d', this.scorePath(data));
 	}
 }
 
