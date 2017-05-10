@@ -3,7 +3,6 @@ const d3 = require('d3');
 class Linechart {
 	constructor(app) {
 		this.app = app;
-		this.init();
 	}
 
 	init() {

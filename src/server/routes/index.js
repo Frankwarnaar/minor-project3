@@ -2,6 +2,7 @@ const express = require('express');
 
 const router = express.Router()
 	.get('/', getRanking)
+	.get('/dashboard/:id', getDashboard)
 	.get('/catererData/:id/:consumption/:productsSold', updateCatererData);
 
 function getRanking(req, res) {
@@ -26,7 +27,7 @@ const caterers = [
 function updateCatererData(req, res) {
 	const id = req.params.id;
 	const consumption = req.params.consumption / 20;
-	const productsSold = req.params.productsSold;
+	const productsSold = Number(req.params.productsSold);
 	const timestamp = (new Date()).getTime();
 	const matchingCaterer = caterers.find(caterer => {
 		return caterer.id === id;
@@ -38,17 +39,21 @@ function updateCatererData(req, res) {
 	}
 
 	if (matchingCaterer) {
-		matchingCaterer.data.push(snapshot);
 
 		const recentData = matchingCaterer.data.filter(datapoint => {
 			return datapoint.timestamp > timestamp - 60 * 1000;
 		});
+		recentData.push(snapshot);
 		const averageConsumption = recentData.reduce((buffer, current) => {
 			return buffer + current.consumption;
 		}, 0) / recentData.length;
 		const totalProductsSold = recentData[recentData.length - 1].productsSold - recentData[0].productsSold;
 		matchingCaterer.efficiency = totalProductsSold / averageConsumption / recentData.length * 60;
+		snapshot.efficiency = totalProductsSold / averageConsumption / recentData.length * 60;
 		matchingCaterer.score = matchingCaterer.efficiency / matchingCaterer.average;
+		snapshot.score = matchingCaterer.efficiency / matchingCaterer.average;
+
+		matchingCaterer.data.push(snapshot);
 	} else {
 		const efficiency = prodoctsSold / consumption;
 		caterers.push({
@@ -58,6 +63,13 @@ function updateCatererData(req, res) {
 		});
 	}
 	req.io.emit('publishRanking', caterers);
+	res.send(caterers);
+}
+
+function getDashboard(req, res) {
+	res.render('dashboard', {
+		id: req.params.id
+	});
 }
 
 module.exports = router;

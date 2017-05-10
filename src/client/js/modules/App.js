@@ -8,13 +8,14 @@ class App {
 		this.controller = new Controller(this);
 		this.view = new View(this);
 		this.utils = new Utils(this);
-		this.linechart = new Linechart()
+		this.linechart = new Linechart();
 
 		this.init();
 	}
 
 	init() {
 		this.controller.init();
+		this.linechart.init();
 	}
 }
 

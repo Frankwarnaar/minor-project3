@@ -11,7 +11,12 @@ class Controller {
 		this.app.socket = io();
 
 		this.app.socket
-			.on('publishRanking', this.app.view.renderRanking.bind(this));
+			.on('publishRanking', onPublishRanking.bind(this));
+
+		function onPublishRanking(ranking) {
+			this.app.view.renderRanking(ranking);
+			this.app.linechart.update(ranking);
+		}
 	}
 }
 
