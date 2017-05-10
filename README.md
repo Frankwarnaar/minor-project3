@@ -9,6 +9,9 @@ May 8 - 12, 2017
 #### Team:
 Pierre, Frank, Roy & Tijs
 
+#### Project:
+[Link to project](https://catering-sustainability.herokuapp.com/)
+
 ## Introduction
 
 This project is based on the knowledge gained from the courses: Real Time Web and Web of Things. The client for this project is Watt-Now, a company that makes off-grid energy more sustainable. They mostly work in the festival industry, so that will be the focus for this project.
@@ -84,3 +87,7 @@ The caterers get asked to create an inventory with all their devices. The sum of
 The festival and the caterers can show off with their durable status data that is generated during the festival. The caterer can view his personal dashboard with all information about their sustainability.
 
 ![Dashboard image](images/dashboard.jpg)
+
+##### Future ideas
+
+When all data is gathered over a longer period of time.
