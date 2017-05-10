@@ -6,7 +6,9 @@ const router = express.Router()
 	.get('/catererData/:id/:consumption/:productsSold', updateCatererData);
 
 function getRanking(req, res) {
-	res.render('ranking');
+	res.render('ranking', {
+		title: 'Sustainable leaderboard'
+	});
 }
 
 class Caterer {
@@ -68,7 +70,8 @@ function updateCatererData(req, res) {
 
 function getDashboard(req, res) {
 	res.render('dashboard', {
-		id: req.params.id
+		id: req.params.id,
+		title: 'Personal dashboard'
 	});
 }
 
