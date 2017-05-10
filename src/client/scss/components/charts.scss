@@ -1,15 +1,22 @@
+.chart-container {
+	display: flex;
+	margin-bottom: 5rem;
+	margin-top: 5rem;
+	flex-direction: row;
+	justify-content: center;
+	position: relative;
+}
+
 svg {
 	padding: 1rem;
 	margin: 0 auto;
-	margin-bottom: 5rem;
-	margin-top: 5rem;
 	display: block;
-	border: 2px solid $color-lightest;
+	border: .325rem solid $color-lightest;
 }
 
 svg path {
 	fill: none;
-	stroke-width: 2px;
+	stroke-width: .325rem;
 	stroke: $color-primary;
 
 	&.path__secondary {
