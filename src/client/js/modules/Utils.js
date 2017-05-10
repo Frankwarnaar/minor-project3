@@ -3,7 +3,9 @@ class Utils {
 		this.app = app;
 	}
 
-	calculateScoreZone(ratio) {
+	calculateScoreZone(score, target) {
+		const ratio = score / target;
+		console.log(ratio);
 		switch(true) {
 			case (ratio == 0):
 				return 'not measured';

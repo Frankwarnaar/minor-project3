@@ -69,32 +69,36 @@ class Linechart {
 		const caterer = ranking.filter(caterer => {
 			return caterer.id === this.id;
 		})[0];
-		let data = caterer.data;
-		data = data.map((datapoint, i) => {
-			datapoint.productsSold = datapoint.productsSold - (data[i - 1] ? data[i - 1].productsSold : 0);
-			return datapoint;
-		});
+		if (caterer) {
+			let data = caterer.data;
+			if (data && this.id) {
+				data = data.map((datapoint, i) => {
+					datapoint.productsSold = datapoint.productsSold - (data[i - 1] ? data[i - 1].productsSold : 0);
+					return datapoint;
+				});
 
-		this.x.domain(d3.extent(data, d => new Date(d.timestamp)));
-		const maxScore = d3.max(data, d => d.score);
-		const maxProductsSold = d3.max(data, d => d.productsSold);
-		const maxConsumption = d3.max(data, d => d.consumption);
+				this.x.domain(d3.extent(data, d => new Date(d.timestamp)));
+				const maxScore = d3.max(data, d => d.score);
+				const maxProductsSold = d3.max(data, d => d.productsSold);
+				const maxConsumption = d3.max(data, d => d.consumption);
 
-		this.xAxis.scale(this.x);
-		this.xAxisGroup.call(this.xAxis)
+				this.xAxis.scale(this.x);
+				this.xAxisGroup.call(this.xAxis)
 
-		this.yScore.domain([0, maxScore]);
-		this.yProductsSold.domain([0, maxProductsSold]);
-		this.yConsumption.domain([0, maxConsumption]);
+				this.yScore.domain([0, maxScore]);
+				this.yProductsSold.domain([0, maxProductsSold]);
+				this.yConsumption.domain([0, maxConsumption]);
 
-		this.scoreLine.data(data);
-		this.scoreLine.attr('d', this.scorePath(data));
+				this.scoreLine.data(data);
+				this.scoreLine.attr('d', this.scorePath(data));
 
-		this.productsLine.data(data);
-		this.productsLine.attr('d', this.productsPath(data));
+				this.productsLine.data(data);
+				this.productsLine.attr('d', this.productsPath(data));
 
-		this.consumptionLine.data(data);
-		this.consumptionLine.attr('d', this.consumptionPath(data));
+				this.consumptionLine.data(data);
+				this.consumptionLine.attr('d', this.consumptionPath(data));
+			}
+		}
 	}
 }
 

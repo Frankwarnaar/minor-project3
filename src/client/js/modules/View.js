@@ -18,7 +18,7 @@ class View {
 				}else{
 					caterer.score = 0
 				}
-				const zone = this.app.utils.calculateScoreZone(caterer.score);
+				const zone = this.app.utils.calculateScoreZone(caterer.score, caterer.average);
 				const content = `
 				<span class="caterer-place"># ${(index+1)}</span>
 				<div class="caterer-block">
