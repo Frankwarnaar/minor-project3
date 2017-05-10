@@ -36,3 +36,13 @@ h2{
 	display: block;
 	height: 30px;
 }
+
+.display-sm{
+	display: none;
+}
+
+@media screen and (max-width: 767px){
+	.display-sm{
+		display: block;
+	}
+}

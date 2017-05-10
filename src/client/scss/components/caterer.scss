@@ -34,7 +34,7 @@
     text-align: center;
 }
 
-#ranking span{
+#ranking span {
     font-family: 'DGTL-STENCIL';
     color: #fff;
 }
@@ -52,6 +52,7 @@
 
 .caterer-block {
     width: 90%;
+    flex-wrap: wrap;
     flex-basis: 90%;
     padding: 15px;
     background-color: transparent;
@@ -94,4 +95,46 @@
     display: block;
     padding: 19px;
     font-size: 2em;
+}
+
+#ranking .subtitle-head {
+    font-family: 'Avenir';
+}
+
+@media screen and (max-width: 767px) {
+    .caterer-block .caterer-inner {
+        width: 100%;
+        flex-basis: 100%;
+        margin-top: 3px;
+        margin-bottom: 3px;
+        padding-bottom: 3px;
+        border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+    }
+    .caterer-block .caterer-inner:last-child {
+        border-bottom: none;
+        padding-bottom: 0;
+        margin-bottom: 0;
+    }
+    .ranking-header {
+        display: none;
+    }
+    .logo {
+        float: none;
+        margin: 0 auto;
+        display: block;
+        max-width: 200px;
+    }
+    .caterer-place {
+        width: 20%;
+        flex-basis: 20%;
+        display: block;
+        font-size: 5em;
+        line-height: 2;
+        padding: 0;
+        letter-spacing: -7px;
+    }
+    .caterer-block {
+        width: 80%;
+        flex-basis: 80%;
+    }
 }

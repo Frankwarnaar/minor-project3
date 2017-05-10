@@ -23,16 +23,20 @@ class View {
 				<span class="caterer-place"># ${(index+1)}</span>
 				<div class="caterer-block">
 				<div class="caterer-inner">
-				<span>${caterer.title}</span>
+					<span class="display-sm subtitle-head">Food/Drink stand</span>
+					<span>${caterer.title}</span>
 				</div>
 				<div class="caterer-inner">
-				<span>${caterer.score}</span>
+					<span class="display-sm subtitle-head">Products per kWh</span>
+					<span>${caterer.score}</span>
 				</div>
 				<div class="caterer-inner">
-				<span>${caterer.score}</span>
+					<span class="display-sm subtitle-head">Target</span>
+					<span>${caterer.score}</span>
 				</div>
 				<div class="caterer-inner">
-				<span>${zone}</span>
+					<span class="display-sm subtitle-head">Sustainability</span>
+					<span>${zone}</span>
 				</div>
 				</div>
 				`;
