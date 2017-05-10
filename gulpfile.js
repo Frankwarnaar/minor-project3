@@ -40,11 +40,11 @@ gulp.task('disable-debug', () => {
    ============================================================ */
 
 gulp.task('default', () => {
-	sequence(['watch', 'server'], ['browser-sync']);
+	sequence(['watch', 'server', 'images', 'fonts'], ['browser-sync']);
 });
 
 gulp.task('build', () => {
-	sequence(['clean', 'disable-debug'], ['sass', 'watchify']);
+	sequence(['clean', 'disable-debug'], ['sass', 'watchify', 'images', 'fonts']);
 });
 
 gulp.task('clean', () => {
@@ -144,3 +144,19 @@ gulp.task('browser-sync', () => {
 		files: ['build/client/css/app.css', 'build/client/js/app.js']
 	});
 });
+
+/* ============================================================
+	Images
+   ============================================================ */
+gulp.task('images', () => {
+	return gulp.src(`${config.assetsPath}/images/**`)
+		.pipe(gulp.dest(`${config.distPath}/images`));
+})
+
+/* ============================================================
+	Fonts
+   ============================================================ */
+gulp.task('fonts', () => {
+	return gulp.src(`${config.assetsPath}/fonts/**`)
+		.pipe(gulp.dest(`${config.distPath}/fonts`));
+})
