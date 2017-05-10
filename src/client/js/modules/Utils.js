@@ -8,14 +8,17 @@ class Utils {
 			case (ratio == 0):
 				return 'not measured';
 				break;
-			case (ratio > 1.05):
-				return 'high';
+			case (ratio > 1.5):
+				return 'Very Sustainable';
 				break;
-			case (ratio < .95):
-				return 'low';
+			case (ratio > 1.05):
+				return 'Sunstainable';
+				break;
+			case (ratio > .95 && ratio < 1.05):
+				return 'Avarage';
 				break;
 			default:
-				return 'medium';
+				return 'Not sustainable'
 		}
 	}
 }
