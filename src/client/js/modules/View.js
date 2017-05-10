@@ -28,11 +28,11 @@ class View {
 				</div>
 				<div class="caterer-inner">
 					<span class="display-sm subtitle-head">Products per kWh</span>
-					<span>${caterer.average}</span>
+					<span>${caterer.score}</span>
 				</div>
 				<div class="caterer-inner">
 					<span class="display-sm subtitle-head">Target</span>
-					<span>${caterer.score}</span>
+					<span>${caterer.average}</span>
 				</div>
 				<div class="caterer-inner">
 					<span class="display-sm subtitle-head">Sustainability</span>
