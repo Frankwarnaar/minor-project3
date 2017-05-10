@@ -9,6 +9,7 @@
 
 svg {
 	padding: 1rem;
+	padding-top: 2rem;
 	margin: 0 auto;
 	display: block;
 	border: .325rem solid $color-lightest;
@@ -25,5 +26,16 @@ svg path {
 
 	&.path__tertiary {
 		stroke: $color-tertiary;
+	}
+}
+
+.chart__axis {
+	path {
+		stroke-width: .25rem;
+		stroke: $color-lightest;
+	}
+
+	.tick {
+		fill: $color-lightest;
 	}
 }
