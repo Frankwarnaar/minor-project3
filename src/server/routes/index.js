@@ -22,8 +22,8 @@ class Caterer {
 
 const caterers = [
 	new Caterer('Sandwiches', 'FFB3', 24.38),
-	new Caterer('Snackbar', 'O3EE', 17.43),
-	new Caterer('Kebab', 'a', 12.98)
+	new Caterer('Snackbar', '03EE', 17.43),
+	new Caterer('Kebab', 'D935', 12.98)
 ];
 
 function updateCatererData(req, res) {

@@ -1,5 +1,4 @@
 #include <OpenWiFi.h>
-#include <ArduinoJson.h>
 
 #include <ESP8266HTTPClient.h>
 #include <Servo.h>
@@ -104,60 +103,6 @@ void sendData(float powerUsage, int productsSold) {
   http.begin(requestString);
   http.GET();
   http.end();
-}
-
-void requestColor() {
-  HTTPClient http;
-  String requestString = serverURL + "/cue/" + chipID;
-  http.begin(requestString);
-  int httpCode = http.GET();
-  
-  if (httpCode == 200) {
-    String response;
-    response = http.getString();
-    setColor(response);
-  } else {
-    ESP.reset();
-  }
-
-  http.end();
-}
-
-void setColor(String cue) {
-  // Step 1: Reserve memory space
-  StaticJsonBuffer<200> jsonBuffer;
-  // Step 2: Deserialize the JSON string
-  JsonObject& root = jsonBuffer.parseObject(cue);
-
-  Serial.println(cue);
-  
-  bool notRegistered = root["notRegistered"];
-
-  if (notRegistered) {
-    setAllPixels(0, 0, 255);
-    delay(1500);
-    setAllPixels(0, 0, 0);
-  } else {
-    String currentUser = root["currentUser"];
-    Serial.println(currentUser);
-  
-    if (!root.success()) {
-      Serial.println("Parse JSON failed");
-      return;
-    }
-    
-    if (root["currentUser"]) {
-      setAllPixels(0, 0, 0);
-      delay(1500);
-      setAllPixels(0, 255, 0);
-    } else if (root["position"] > 0) {
-      setAllPixels(255, 127, 0);
-    } else if (root["free"] == "true") {
-      setAllPixels(0, 255, 0);
-    } else {
-      setAllPixels(255, 0, 0);
-    } 
-  }
 }
 
 String generateChipID() {

@@ -14,7 +14,7 @@
 #define PROJECT_SHORT_NAME "ICU"
 #define REQUEST_DELAY 2000
 
-#define SERVER_URL "http://29326de0.ngrok.io"
+#define SERVER_URL "http://catering-sustainability.herokuapp.com"
 #define CONFIG_SSID "icu"
 
 #define BACKUP_SSID "BackupSSIDName"
