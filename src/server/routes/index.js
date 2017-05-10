@@ -58,6 +58,7 @@ function updateCatererData(req, res) {
 		});
 	}
 	req.io.emit('publishRanking', caterers);
+	res.send(req.params.id)
 }
 
 module.exports = router;

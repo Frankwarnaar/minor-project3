@@ -1,7 +1,47 @@
 <%- include ./parts/header.ejs %>
 
-<div class="container-fluid">
-	<ol id="ranking"></ol>
+<div class="container nav">
+	<div class="row">
+		<div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
+			<img src="/images/logo.png" alt="logo" class="img-responsive logo col-center">
+		</div>
+		<div class="col-xs-12 col-sm-4 col-md-9 col-lg-10 text-center">
+			<h1>SUSTAINBLE LEADERBOARD</h1>
+		</div>
+		<div class="col-xs-12 col-sm-4 col-md-2 col-lg-2">
+			
+		</div>
+	</div>
+</div>
+<div class="container">
+	<div class="row">
+		<div class="col-xs-12">
+			<div class="ranking-header">
+				<div class="place-header">
+					<span>Pos.</span>
+				</div>
+				<div class="block-header">
+					<div class="inner-header">
+						<span>Food/Drink stand</span>
+					</div>
+					<div class="inner-header">
+						<span>Products per kWh</span>
+					</div>
+					<div class="inner-header">
+						<span>Target</span>
+					</div>
+					<div class="inner-header">
+						<span>Sustainability</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-xs-12">
+			<ol id="ranking"></ol>
+		</div>
+	</div>
 </div>
 
 <%- include ./parts/scripts.ejs %>
