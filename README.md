@@ -90,4 +90,6 @@ The festival and the caterers can show off with their durable status data that i
 
 ##### Future ideas
 
-When all data is gathered over a longer period of time.
+When all data is gathered over a longer period of time, the average amount of sold products per kWh can be set per caterer type. With these values we could set a durable target amount for each type of caterer.
+
+It would be nice to have a global leaderboard with all sustainable caterers. In that way we create full transparency where festivals and other events can see real data from all types of caterers. In that way they can select caterers based on their sustainable status.
