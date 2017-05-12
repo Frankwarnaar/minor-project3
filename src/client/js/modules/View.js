@@ -5,7 +5,7 @@ class View {
 
 	renderRanking(ranking) {
 		ranking = ranking.sort((a, b) => {
-			return b.score - a.score;
+			return (b.score / b.average) - (a.score / a.average);
 		});
 
 		const $list = document.getElementById('ranking');
